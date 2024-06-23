@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Método | Métodos numéricos para ajuste de curvas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Métodos de InterpolaçãoMétodo de LagrangeO Método de Lagrange é um dos métodos de interpolação mais antigos e bem conhecidos. Ele permite a construção de um polinômio de interpolação que passa exatame">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Método">
+<meta property="og:url" content="https://github.com/Haruzinho0/hexomat.git/2024/06/22/Metodo/index.html">
+<meta property="og:site_name" content="Métodos numéricos para ajuste de curvas">
+<meta property="og:description" content="Métodos de InterpolaçãoMétodo de LagrangeO Método de Lagrange é um dos métodos de interpolação mais antigos e bem conhecidos. Ele permite a construção de um polinômio de interpolação que passa exatame">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/hexomat/images/Formula_lagrange.png">
+<meta property="og:image" content="https://github.com/hexomat/images/Formula_lagrange2.png">
+<meta property="og:image" content="https://github.com/hexomat/images/Formula_newton.png">
+<meta property="og:image" content="https://github.com/hexomat/images/Formula_newton2.png">
+<meta property="article:published_time" content="2024-06-23T01:18:22.000Z">
+<meta property="article:modified_time" content="2024-06-23T01:06:50.713Z">
+<meta property="article:author" content="Rafael Haruo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/hexomat/images/Formula_lagrange.png">
+  
+    <link rel="alternate" href="/hexomat/atom.xml" title="Métodos numéricos para ajuste de curvas" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/hexomat/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/hexomat/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/hexomat/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/hexomat/" id="logo">Métodos numéricos para ajuste de curvas</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/hexomat/">Home</a>
+        
+          <a class="main-nav-link" href="/hexomat/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/hexomat/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github.com/Haruzinho0/hexomat.git"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Metodo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexomat/2024/06/22/Metodo/" class="article-date">
+  <time class="dt-published" datetime="2024-06-23T01:18:22.000Z" itemprop="datePublished">2024-06-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Método
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Metodos-de-Interpolacao"><a href="#Metodos-de-Interpolacao" class="headerlink" title="Métodos de Interpolação"></a>Métodos de Interpolação</h3><h4 id="Metodo-de-Lagrange"><a href="#Metodo-de-Lagrange" class="headerlink" title="Método de Lagrange"></a>Método de Lagrange</h4><p>O Método de Lagrange é um dos métodos de interpolação mais antigos e bem conhecidos. Ele permite a construção de um polinômio de interpolação que passa exatamente pelos pontos dados. A fórmula de Lagrange é simples e direta, tornando-se uma ferramenta poderosa para a interpolação de dados.<br>Formulas para realizar os métodos:<br><img src="/hexomat/images/Formula_lagrange.png"><br><img src="/hexomat/images/Formula_lagrange2.png"></p>
+<span id="more"></span>
+
+<p>Código em JS do método de Lagrange:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">function</span> lagrangeInterpolation(x, y, value) &#123;</span><br><span class="line">    <span class="built_in">let</span> n = x.length;</span><br><span class="line">    <span class="built_in">let</span> steps = document.getElementById(<span class="string">&#x27;steps&#x27;</span>);</span><br><span class="line">    steps.innerHTML = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    steps.innerHTML += `&lt;p&gt;Valores dos pontos:&lt;/p&gt;`;</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        steps.innerHTML += `&lt;p&gt;x<span class="variable">$&#123;i&#125;</span> = <span class="variable">$&#123;x[i]&#125;</span>, y<span class="variable">$&#123;i&#125;</span> = <span class="variable">$&#123;y[i]&#125;</span>&lt;/p&gt;`;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">let</span> interpolation = 0;</span><br><span class="line">    <span class="built_in">let</span> polynomialTerms = `P(<span class="variable">$&#123;value&#125;</span>) = `;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">let</span> term = y[i];</span><br><span class="line">        <span class="built_in">let</span> termDetails = `<span class="variable">$&#123;y[i]&#125;</span>`;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">let</span> j = 0; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (j !== i) &#123;</span><br><span class="line">                term *= (value - x[j]) / (x[i] - x[j]);</span><br><span class="line">                <span class="built_in">let</span> intermediateTerm = (value - x[j]) / (x[i] - x[j]);</span><br><span class="line">                <span class="keyword">if</span> (intermediateTerm &lt; 0) &#123;</span><br><span class="line">                    termDetails += ` * (<span class="variable">$&#123;intermediateTerm&#125;</span>)`;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    termDetails += ` * <span class="variable">$&#123;intermediateTerm&#125;</span>`;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        polynomialTerms += ` + <span class="variable">$&#123;termDetails&#125;</span>`;</span><br><span class="line">        interpolation += term;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    steps.innerHTML += `&lt;p&gt;<span class="variable">$&#123;polynomialTerms&#125;</span>&lt;/p&gt;`;</span><br><span class="line">    <span class="built_in">return</span> interpolation;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="Metodo-de-Newton"><a href="#Metodo-de-Newton" class="headerlink" title="Método de Newton"></a>Método de Newton</h4><p>O Método de Newton, por outro lado, oferece uma abordagem alternativa para a interpolação, utilizando diferenças divididas. Este método é particularmente útil quando se deseja adicionar novos pontos ao conjunto de dados existente, pois o polinômio de Newton pode ser facilmente ajustado sem a necessidade de recalcular todo o polinômio desde o início.<br>Formulas para realizar os métodos:<br><img src="/hexomat/images/Formula_newton.png"><br><img src="/hexomat/images/Formula_newton2.png"></p>
+<p>Código em JS do método de Newton:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">function</span> newtonInterpolation(x, y, value) &#123;</span><br><span class="line">    <span class="built_in">let</span> n = x.length;</span><br><span class="line">    <span class="built_in">let</span> dividedDifferences = [];</span><br><span class="line">    <span class="built_in">let</span> steps = document.getElementById(<span class="string">&#x27;steps&#x27;</span>);</span><br><span class="line">    steps.innerHTML = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    steps.innerHTML += `&lt;p&gt;Valores dos f[x,0]:&lt;/p&gt;`;</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        dividedDifferences.push([y[i]]);</span><br><span class="line">        steps.innerHTML += `&lt;p&gt;f[<span class="variable">$&#123;i&#125;</span>,0] = <span class="variable">$&#123;y[i]&#125;</span>&lt;/p&gt;`;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    steps.innerHTML += `&lt;p&gt;Valores dos pontos:&lt;/p&gt;`;</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        steps.innerHTML += `&lt;p&gt;x<span class="variable">$&#123;i&#125;</span> = <span class="variable">$&#123;x[i]&#125;</span>, y<span class="variable">$&#123;i&#125;</span> = <span class="variable">$&#123;y[i]&#125;</span>&lt;/p&gt;`;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> j = 1; j &lt; n; j++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; n - j; i++) &#123;</span><br><span class="line">            <span class="built_in">let</span> value = (dividedDifferences[i + 1][j - 1] - dividedDifferences[i][j - 1]) / (x[i + j] - x[i]);</span><br><span class="line">            <span class="keyword">if</span> (!dividedDifferences[i][j]) &#123;</span><br><span class="line">                dividedDifferences[i].push(value);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                dividedDifferences[i][j] = value;</span><br><span class="line">            &#125;</span><br><span class="line">            steps.innerHTML += `&lt;p&gt;f[<span class="variable">$&#123;i&#125;</span>,<span class="variable">$&#123;j&#125;</span>] = (f[<span class="variable">$&#123;i + 1&#125;</span>,<span class="variable">$&#123;j - 1&#125;</span>] - f[<span class="variable">$&#123;i&#125;</span>,<span class="variable">$&#123;j - 1&#125;</span>]) / (<span class="variable">$&#123;x[i + j]&#125;</span> - <span class="variable">$&#123;x[i]&#125;</span>) = <span class="variable">$&#123;value&#125;</span>&lt;/p&gt;`;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">let</span> interpolation = dividedDifferences[0][0];</span><br><span class="line">    <span class="built_in">let</span> polynomialTerms = `P(<span class="variable">$&#123;value&#125;</span>) = <span class="variable">$&#123;interpolation&#125;</span>`;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i = 1; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">let</span> term = dividedDifferences[0][i];</span><br><span class="line">        <span class="built_in">let</span> termDetails = `<span class="variable">$&#123;term&#125;</span>`;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (term &lt; 0) &#123;</span><br><span class="line">            termDetails = `(<span class="variable">$&#123;term&#125;</span>)`;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">let</span> j = 0; j &lt; i; j++) &#123;</span><br><span class="line">            term *= (value - x[j]);</span><br><span class="line">            <span class="built_in">let</span> intermediateTerm = (value - x[j]);</span><br><span class="line">            <span class="keyword">if</span> (intermediateTerm &lt; 0) &#123;</span><br><span class="line">                termDetails += ` * (<span class="variable">$&#123;intermediateTerm&#125;</span>)`;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                termDetails += ` * <span class="variable">$&#123;intermediateTerm&#125;</span>`;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        polynomialTerms += ` + <span class="variable">$&#123;termDetails&#125;</span>`;</span><br><span class="line">        interpolation += term;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    steps.innerHTML += `&lt;p&gt;<span class="variable">$&#123;polynomialTerms&#125;</span>&lt;/p&gt;`;</span><br><span class="line">    <span class="built_in">return</span> interpolation;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/Haruzinho0/hexomat.git/2024/06/22/Metodo/" data-id="clxqus1pl0001fsyoavz5grzv" data-title="Método" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/hexomat/2024/06/22/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Portfolio
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hexomat/2024/06/22/Lista/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Atividades</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexomat/archives/2024/06/">June 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexomat/2024/06/22/hello-world/">Portfolio</a>
+          </li>
+        
+          <li>
+            <a href="/hexomat/2024/06/22/Metodo/">Método</a>
+          </li>
+        
+          <li>
+            <a href="/hexomat/2024/06/22/Lista/">Atividades</a>
+          </li>
+        
+          <li>
+            <a href="/hexomat/2024/06/22/Sistema/">Sistema</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Rafael Haruo<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/hexomat/" class="mobile-nav-link">Home</a>
+  
+    <a href="/hexomat/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/hexomat/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/hexomat/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/hexomat/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
